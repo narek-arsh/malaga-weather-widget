@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Clima</title>
-  <style>
-    html,body{margin:0;padding:0;background:#f5f7fb;font-family:Arial,system-ui}
-    .wrap{max-width:980px;margin:12px auto 18px;padding:0 12px}
-    #ww_box{display:block;min-height:220px;max-width:100%}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima en Málaga</title>
 </head>
 <body>
-  <div class="wrap">
-    <!-- sin ids: usa geolocalización del visitante -->
-    <div id="ww_box" v="1.3" loc="auto"
-         a='{"t":"responsive","lang":"es","sl_lpl":1,"font":"Arial",
-             "sl_ics":"one_a","sl_sot":"celsius",
-             "cl_bkg":"solid","cl_font":"#111111","cl_cloud":"#111111",
-             "cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
-      <!-- fallback link -->
-      <a href="https://oneweather.org/es/malaga/25_days/" target="_blank" rel="noopener">Tiempo 25 días</a>
-    </div>
-  </div>
-  <script async src="https://app3.weatherwidget.org/js/?id=ww_box"></script>
+  <a class="weatherwidget-io"
+     href="https://forecast7.com/es/36d72n4d42/malaga/"
+     data-label_1="MÁLAGA"
+     data-label_2="TIEMPO"
+     data-font="Roboto"
+     data-icons="Climacons Animated"
+     data-theme="original">
+     MÁLAGA WEATHER
+  </a>
+
+  <script>
+  !function(d,s,id){
+      var js,fjs=d.getElementsByTagName(s)[0];
+      if(!d.getElementById(id)){
+          js=d.createElement(s);
+          js.id=id;
+          js.src='https://weatherwidget.io/js/widget.min.js';
+          fjs.parentNode.insertBefore(js,fjs);
+      }
+  }(document,'script','weatherwidget-io-js');
+  </script>
 </body>
 </html>
